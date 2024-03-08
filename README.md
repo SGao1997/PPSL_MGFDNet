@@ -3,13 +3,13 @@
 A PyTorch 1.8 implementation of PPSL and MGFDNet with ResNet18
 * The proposed framework:  
 
-<img src="paperImgs/framework.png" style="zoom:30%">
+<img src="paperImgs/framework.png" style="zoom:20%">
 
 * Pairing Single-temporal Supervised Learning (PPSL):  
 
 
 
-<img src="paperImgs/PPSL.png" style="zoom:30%">
+<img src="paperImgs/PPSL.png" style="zoom:20%">
 
 ---
 
