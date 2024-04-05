@@ -155,37 +155,19 @@ class testDatasets(Data.Dataset):
 
         self.data_list = os.listdir(label1_dir)
 
-        if is_Transforms:
-            self.tx1 = torchvision.transforms.Compose([
-                torchvision.transforms.ColorJitter(brightness=0.4, contrast=0.4, saturation=0.4),
-                torchvision.transforms.ToTensor(),
-                torchvision.transforms.Normalize(mean=mean, std=std)
-            ])
-
-            self.tx2 = torchvision.transforms.Compose([
-                torchvision.transforms.ColorJitter(brightness=0.4, contrast=0.4, saturation=0.4),
-                torchvision.transforms.ToTensor(),
-                torchvision.transforms.Normalize(mean=mean, std=std)
-            ])
-
-            self.lx = torchvision.transforms.Compose([
-                torchvision.transforms.ToTensor(),
-            ])
-
-        else:
-            self.tx1 = torchvision.transforms.Compose([
+        self.tx1 = torchvision.transforms.Compose([
                 torchvision.transforms.Resize((512,512), interpolation=2),
                 torchvision.transforms.ToTensor(),
                 torchvision.transforms.Normalize(mean=mean, std=std)
             ])
 
-            self.tx2 = torchvision.transforms.Compose([
+        self.tx2 = torchvision.transforms.Compose([
                 torchvision.transforms.Resize((512,512), interpolation=2),
                 torchvision.transforms.ToTensor(),
                 torchvision.transforms.Normalize(mean=mean, std=std)
             ])
 
-            self.lx = torchvision.transforms.Compose([
+        self.lx = torchvision.transforms.Compose([
                 torchvision.transforms.Resize((512,512), interpolation=0),
                 torchvision.transforms.ToTensor(),
             ])
